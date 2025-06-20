@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pre Enrollment Form</title>
+  <link rel="stylesheet" href="enrollment.css" />
+</head>
+<body>
+  <div class="container">
+    <h5>PHILTECH GMA</h5>
+    <p class="subhead">Philippine Technological Institute Of Science Arts And Trade</p>
+
+    <h3>Welcome to Philippine Technological Institute of Science Arts and Trade Central Incorporation.</h3>
+    <p>Please Complete The Form of your Enrollment.</p>
+
+    <h2>Pre Enrollment Form</h2>
+
+    <form id="enrollmentForm">
+      <label>Name:</label>
+      <input type="text" name="name" required />
+
+      <label>Address:</label>
+      <input type="text" name="address" required />
+
+      <div class="row">
+        <div>
+          <label>Sex:</label>
+          <input type="text" name="sex" required />
+        </div>
+        <div>
+          <label>Birthday:</label>
+          <input type="date" name="birthday" required />
+        </div>
+      </div>
+
+      <label>Place of Birth:</label>
+      <input type="text" name="birthplace" required />
+
+      <div class="row">
+        <div>
+          <label>Nationality:</label>
+          <input type="text" name="nationality" required />
+        </div>
+        <div>
+          <label>Religion:</label>
+          <input type="text" name="religion" required />
+        </div>
+      </div>
+
+      <label>Contact No:</label>
+      <input type="text" name="contact" required />
+
+      <label>Application Type:</label>
+      <select name="applicationType" required>
+        <option value="">Please Select an Application Type -</option>
+        <option value="New">New</option>
+        <option value="Transferee">Transferee</option>
+        <option value="Returnee">Returnee</option>
+      </select>
+      <div id="collegeOptions">
+        <label>Course:</label>
+        <select name="course" required>
+          <option value="">Select a Course -</option>
+          <option value="BSCS">BSCS - Bachelor of Science in Computer Science</option>
+          <option value="BSOA">BSOA - Bachelor of Science in Office Administration</option>
+          <option value="BTVTED">BTVTED - Bachelor of Technical Vocational Teacher Education</option>
+        </select>
+
+        <label>Year Level:</label>
+        <select name="yearLevel" required>
+          <option value="">Select Year Level -</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <a href="homepage.html">Back</a>
+   <p id="formStatus" style="text-align:center; margin-top: 10px; font-weight: bold;"></p>
+
+<p id="formStatus" style="text-align:center; margin-top: 10px; font-weight: bold;"></p>
+
+<script>
+  const SHEETDB_URL = 'https://sheetdb.io/api/v1/jqvand2zpc1cl'; // ✅ Your actual SheetDB URL
+
+  document.getElementById('enrollmentForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formStatus = document.getElementById('formStatus');
+    const formData = new FormData(form);
+
+    // Convert form data to a plain object
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value.trim();
+    });
+
+    console.log("Submitted Data:", data); // Debug log
+
+    // Check required fields
+    if (!data.contact || !data.name || !data.yearLevel) {
+      formStatus.textContent = 'Please complete all required fields.';
+      formStatus.style.color = 'red';
+      return;
+    }
+
+    try {
+      // Check for duplicate contact
+      formStatus.textContent = 'Checking for duplicates...';
+      const check = await fetch(`${SHEETDB_URL}/search?contact=${encodeURIComponent(data.contact)}`);
+      const duplicate = await check.json();
+
+      if (duplicate.length > 0) {
+        formStatus.textContent = 'This contact number is already registered.';
+        formStatus.style.color = 'red';
+        return;
+      }
+
+      // Submit to SheetDB
+      formStatus.textContent = 'Submitting...';
+      const response = await fetch(SHEETDB_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: data })
+      });
+
+      if (response.ok) {
+        formStatus.textContent = 'Form submitted successfully!';
+        formStatus.style.color = 'green';
+        form.reset();
+      } else {
+        formStatus.textContent = 'Failed to submit the form. Try again.';
+        formStatus.style.color = 'red';
+      }
+
+    } catch (error) {
+      console.error('Error:', error);
+      formStatus.textContent = 'Network error. Please try again later.';
+      formStatus.style.color = 'red';
+    }
+  });
+</script>
+ 
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhilTech-GMA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <div>
+          <div class="logo">
+            <img src="images/logo.png" alt="Logo" />
+            <h2>PhilTech-GMA</h2>
+          </div>
+          <nav class="nav-links">
+            <a href="homepage.html"><img src="https://icons.veryicon.com/png/o/commerce-shopping/poly-budget-icon-library/home-202.png" alt="Home" /> Home</a>
+            <a href="about.html"><img src="https://icons.veryicon.com/png/o/miscellaneous/member-circle-im/about-12.png" alt="About" /> About</a>
+            <a href="courses.html"><img src="https://static-00.iconduck.com/assets.00/course-icon-1953x2048-w4ufbsaj.png" alt="Courses" /> Courses</a>
+            <a href="contact.html"><img src="https://cdn-icons-png.freepik.com/256/3095/3095583.png?semt=ais_hybrid" alt="Contact" /> Contact</a>
+          </nav>
+        </div>
+        <!-- Developer info icon at bottom -->
+        <div class="developer-info">
+          <a href="javascript:void(0);" onclick="openPopup()">
+    <img src="https://cdn-icons-png.flaticon.com/512/4974/4974463.png" alt="Developer" />
+    Developer
+        </div>
+      </div>
+    </aside>
+    
+
+    <script>
+      const links = document.querySelectorAll(".nav-links a");
+      links.forEach(link => {
+        if (link.href === window.location.href) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+    <main class="main-content">
+      <header class="top-header">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=philtechgma2013@gmail.com&su=Hello%20PhilTech&body=Hi%20I%20would%20like%20to%20ask%20about...">philtech_gma@gmail.com</a>
+      </header>
+
+      <section class="hero">
+        <img src="images/banner.jpg" alt="PhilTech Building" class="hero-img" />
+        <div class="hero-text">
+          <h1>Welcome to PhilTech-GMA</h1>
+          <p>Globally Success Through Academic Excellence</p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+      </section>
+       <script>
+  document.querySelector('.enroll-btn').addEventListener('click', function () {
+    window.location.href = 'EnrollmentForm.html';
+  });
+</script>
+
+      <div class="teacher-container">
+        <h2>PHILTECH TEACHER</h2>
+        <div class="teacher-scroll">
+    <div class="teacher-scroll">
+      <div class="teacher-card">
+        <img src="images/siratienza.jpg" alt="Michael Atienza">
+        <p>Sir Michael</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/sirf.jpg" alt="Sirf">
+        <p>Sir f</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/sirgerald.jpg" alt="Sir gerald">
+        <p>Sir gerald</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/sirjude.jpg" alt="Sir Jude">
+        <p>Sir Jude</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/sirnori.jpg" alt="Sir Nori">
+        <p>Sir Nori</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/sirpats.jpg" alt="Sir Pats">
+        <p>Sir Pats</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/sirraiven.jpg" alt="Sir Raiven">
+        <p>Sir Raiven</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/raniel.jpg" alt="sir Raniel">
+        <p>Sir Raniel</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/maamacerno.jpg" alt="Maam Acerno">
+        <p>Ma'am Acerno</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/maammagno.jpg" alt="Maam Magno">
+        <p>Ma'am Magno</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/maamrivera.jpg" alt="Maam Rivera">
+        <p>Ma'am Rivera</p>
+      </div>
+      <div class="teacher-card">
+        <img src="images/maamyabut.jpg" alt="Maam Yabut">
+        <p>Ma'am Yabut</p>
+      </div>
+    </div>
+        </div>
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <img src="https://img.icons8.com/ios-filled/50/000000/goal.png" alt="Mission Icon" />
+              <span>Mission</span>
+            </div>
+            <p>
+              PHILTECH shall emerge as one of the educational institutions in the Philippines
+              that can provide academic excellence, appropriate technology and produce graduates
+              who are globally competitive and shall serve as pillar in this challenging world.
+            </p>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="card-header2">
+            <img src="https://img.icons8.com/ios-filled/50/000000/visible.png" alt="Vision Icon" />
+            <span>Vision</span>
+          </div>
+          <p>
+            Philippine Technological Institute of Science Arts and Trade, Inc. (PHILTECH) is dedicated
+            to give quality education to the development of every Filipino. It aims to hone students
+            who are values oriented and physically, academically, socially, and spiritually committed
+            to the achievement of life-long learning and service to the nation.
+          </p>
+        </div>
+      </div>
+      <div class="hymn">
+        <h2>PhilTech Hymn</h2>
+        <iframe width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/QWq-dc0x7ZI?si=Zkz4dQ5QNELKJxTx"
+          title="YouTube video player" 
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+      <section class="History"> 
+        <h2>School History</h2>
+        <p>The Philippine Technological Institute of Science Arts and <br>Trade Inc. (PHILTECH) was founded in 2010 in Tanay, Rizal,<br> by a diverse group of eleven professionals, including engineers, IT experts, and educators. <br> Starting as a non-stock, non-profit institution, it initially offered two-year <br>technical programs in Information Technology, Hotel and Restaurant <br> Services, and Business Outsourcing Management. By 2013, its first graduates completed their studies, supported by TESDA-Rizal accreditation, and the school expanded with new branches in Sta. Rosa, Laguna, and General Mariano Alvarez (GMA), Cavite, serving over 1,160 students by 2013–2014. <br>Committed to fostering global success through accessible education, PHILTECH prioritizes technical-vocational training, academic excellence, and skill development. As a patriotic, non-sectarian institution, it focuses on empowering Filipino youth to become productive citizens. With a dynamic faculty and a mission centered on community service, PHILTECH remains dedicated to molding future leaders while upholding its founders’vision of blending innovation, education, and social responsibility.</p>
+      </section>
+       <!-- Developer Info Popup -->
+<div class="popup-overlay" id="developerPopup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Developer Information</h2>
+    <p><strong>Name:</strong> Johnuel Burdeos</p>
+    <p><strong>Email:</strong> johnuelburdeos@gmail.com</p>
+    <p><strong>Role:</strong> Web Developer</p>
+    <p><strong>Contact:</strong> (+63) 930 - 350 - 5810</p>
+  </div>
+</div>
+
+
+
+      <footer class="philtech-footer">
+        <div class="philtech-footer-contact">
+          <p>CRDM Building, Congressional Rd, Maderan,<br>
+          Gen. Mariano Alvarez, 4117 Cavite</p>
+          <p>philtect-gma@gmail.com</p>
+          <p>(+63) 917-123-4567<br>(046) 123-4567</p>
+        </div>
+        <div class="philtech-footer-brand">
+          <h2 class="footer-title">PhilTech-GMA</h2>
+          <p>Follow us on Facebook</p>
+          <img src="images/logo.png" alt="PhilTech Logo" class="footer-brand-logo" />
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhilTech-GMA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+   <aside class="sidebar">
+  <div class="sidebar-content">
+    <div>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+        <h2>PhilTech-GMA</h2>
+      </div>
+      </div>
+      <nav class="nav-links">
+        <a href="homepage.html"><img src="https://icons.veryicon.com/png/o/commerce-shopping/poly-budget-icon-library/home-202.png" alt="Home" /> Home</a>
+        <a href="about.html"><img src="https://icons.veryicon.com/png/o/miscellaneous/member-circle-im/about-12.png" alt="About" /> About</a>
+        <a href="courses.html"><img src="https://static-00.iconduck.com/assets.00/course-icon-1953x2048-w4ufbsaj.png" alt="Courses" /> Courses</a>
+        <a href="contact.html"><img src="https://cdn-icons-png.freepik.com/256/3095/3095583.png?semt=ais_hybrid" alt="Contact" /> Contact</a>
+      </nav>
+    </div>
+
+    <!-- Developer info icon at bottom -->
+    <div class="developer-info">
+<a href="javascript:void(0);" onclick="openPopup()">
+    <img src="https://cdn-icons-png.flaticon.com/512/4974/4974463.png" alt="Developer" />
+    Developer
+    </div>
+  </div>
+</aside>
+
+    <script>
+  const links = document.querySelectorAll(".nav-links a");
+  links.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="top-header">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=philtechgma2013@gmail.com&su=Hello%20PhilTech&body=Hi%20I%20would%20like%20to%20ask%20about...">philtech_gma@gmail.com</a>
+      </header>
+
+      <section class="hero">
+        <img src="images/banner.jpg" alt="PhilTech Building" class="hero-img" />
+        <div class="hero-text">
+          <h1>Welcome to PhilTech-GMA</h1>
+          <p>Globally Success Through Academic Excellence</p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+      </section>
+       <script>
+  document.querySelector('.enroll-btn').addEventListener('click', function () {
+    window.location.href = 'EnrollmentForm.html';
+  });
+</script>
+
+      <section class="contact-section">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <div class="info-block">
+        <img src="https://www.iconpacks.net/icons/2/free-location-icon-2952-thumb.png" alt="Location Icon">
+        <p>CRDM Building, Congressional Rd, Maderan, Gen. Mariano Alvarez, Cavite 4117</p>
+      </div>
+      <div class="info-block">
+        <img src="https://static-00.iconduck.com/assets.00/email-icon-256x203-zt992cix.png" alt="Email Icon">
+        <p>philtect-gma@gmail.com</p>
+      </div>
+      <div class="info-block">
+        <img src="https://www.iconpacks.net/icons/1/free-phone-icon-1-thumb.png" alt="Phone Icon">
+        <p>(+63) 917-123-4567<br>(046) 123-4567</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="https://formspree.io/f/xyzjwyda" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+   <div class="map-section">
+    <div class="map-title"> Location</div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.4763306054815!2d120.99651511017706!3d14.283734284699195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d604cb43d9bf%3A0x52511a523c76345!2sPhiltech!5e0!3m2!1sen!2sph!4v1748903699021!5m2!1sen!2sph" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <!-- Developer Info Popup -->
+<div class="popup-overlay" id="developerPopup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Developer Information</h2>
+     <p><strong>Name:</strong> Johnuel Burdeos</p>
+    <p><strong>Email:</strong> johnuelburdeos@gmail.com</p>
+    <p><strong>Role:</strong> Web Developer</p>
+    <p><strong>Contact:</strong> (+63) 930 - 350 - 5810</p>
+  </div>
+</div>
+
+     </div> <!-- Closing main .container -->
+  <footer class="philtech-footer">
+    <div class="philtech-footer-contact">
+      <p>CRDM Building, Congressional Rd, Maderan,<br>
+      Gen. Mariano Alvarez, 4117 Cavite</p>
+      <p>philtect-gma@gmail.com</p>
+      <p>(+63) 917-123-4567<br>(046) 123-4567</p>
+    </div>
+    <div class="philtech-footer-brand">
+      <h2 class="footer-title">PhilTech-GMA</h2>
+      <p>Follow us on Facebook</p>
+      <img src="images/logo.png" alt="PhilTech Logo" class="footer-brand-logo" />
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</html>

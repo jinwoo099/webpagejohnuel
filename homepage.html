@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhilTech-GMA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <div>
+          <div class="logo">
+            <img src="images/logo.png" alt="Logo" />
+          </div>
+          <nav class="nav-links">
+            <a href="homepage.html"><img src="https://icons.veryicon.com/png/o/commerce-shopping/poly-budget-icon-library/home-202.png" alt="Home" /> Home</a>
+            <a href="about.html"><img src="https://icons.veryicon.com/png/o/miscellaneous/member-circle-im/about-12.png" alt="About" /> About</a>
+            <a href="courses.html"><img src="https://static-00.iconduck.com/assets.00/course-icon-1953x2048-w4ufbsaj.png" alt="Courses" /> Courses</a>
+            <a href="contact.html"><img src="https://cdn-icons-png.freepik.com/256/3095/3095583.png?semt=ais_hybrid" alt="Contact" /> Contact</a>
+          </nav>
+        </div>
+        <!-- Developer info icon at bottom -->
+        <div class="developer-info">
+          <a href="javascript:void(0);" onclick="openPopup()">
+            <img src="https://cdn-icons-png.flaticon.com/512/4974/4974463.png" alt="Developer" />
+            Developer
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-header">
+        <h2>PhilTech-GMA</h2>
+      </header>
+
+      <section class="hero">
+        <img src="images/banner.jpg" alt="PhilTech Building" class="hero-img" />
+        <div class="hero-text">
+          <h1>Welcome to PhilTech-GMA</h1>
+          <p>Globally Success Through Academic Excellence</p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+      </section>
+
+      <section class="welcome">
+        <div class="welcome-phrase">
+          <h2>Welcome to PhilTech-GMA</h2>
+          <p>Globally Success Through Academic Excellence<br>
+            PHILTECH GMA is a proud institution committed to providing quality, affordable, and industry-relevant education to students across Cavite and beyond. We offer a range of programs from Senior High School to College, designed to prepare students for success in the 21st-century workforce.<br>
+            Whether you're aiming for a career in business, technology, education, or public service — PHILTECH GMA is here to help you reach your dreams.
+          </p>
+        </div>
+
+        <div class="why-us">
+          <h3>Why Choose PHILTECH GMA?</h3>
+          <ul>
+            <li>Competent and experienced faculty</li>
+            <li>Hands-on, industry-aligned training</li>
+            <li>Safe and welcoming campus</li>
+            <li>Affordable tuition fees</li>
+            <li>Government-accredited programs</li>
+            <li>Strong focus on values, discipline, and excellence</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slider Section -->
+      <div class="home-content">
+        <div class="slider-container">
+          <button class="slider-btn prev-btn">&#10094;</button>
+          <div class="slider">
+            <div class="slide active">
+              <img src="images/five.jpg" alt="PhilTech Senior High">
+            </div>
+            <div class="slide">
+              <img src="images/three.jpg" alt="Programs Offered">
+            </div>
+            <div class="slide">
+              <img src="images/sh1.jpg" alt="Senior High Enrollment">
+            </div>
+          </div>
+          <button class="slider-btn next-btn">&#10095;</button>
+        </div>
+      </div>
+
+      <!-- Developer Info Popup -->
+      <div class="popup-overlay" id="developerPopup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2>Developer Information</h2>
+          <p><strong>Name:</strong> Johnuel Burdeos</p>
+          <p><strong>Email:</strong> johnuelburdeos@gmail.com</p>
+          <p><strong>Role:</strong> Web Developer</p>
+          <p><strong>Contact:</strong> (+63) 930 - 350 - 5810</p>
+        </div>
+      </div>
+
+      <footer class="philtech-footer">
+        <div class="philtech-footer-contact">
+          <p>CRDM Building, Congressional Rd, Maderan,<br>
+            Gen. Mariano Alvarez, 4117 Cavite</p>
+          <p>philtect-gma@gmail.com</p>
+          <p>(+63) 917-123-4567<br>(046) 123-4567</p>
+        </div>
+        <div class="philtech-footer-brand">
+          <h2 class="footer-title">PhilTech-GMA</h2>
+          <p>Follow us on Facebook</p>
+          <img src="images/logo.png" alt="PhilTech Logo" class="footer-brand-logo" />
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Highlight current link
+    const links = document.querySelectorAll(".nav-links a");
+    links.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add("active");
+      }
+    });
+
+    // Enroll button
+    document.querySelector('.enroll-btn').addEventListener('click', function () {
+      window.location.href = 'EnrollmentForm.html';
+    });
+
+    // Popup functions
+    function openPopup() {
+      document.getElementById("developerPopup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("developerPopup").style.display = "none";
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
